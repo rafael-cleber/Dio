@@ -1,8 +1,9 @@
 ```mermaid
     classDiagram
     class ReprodutorMusical {
-    +exemploMetodo1()
-    +exemploMetodo2(String exemplo)
+    +tocar()
+    +pausar()
+    +selecionarMusica(String musica)
     }
 
     class AparelhoTelefonico {
