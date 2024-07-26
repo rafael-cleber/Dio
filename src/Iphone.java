@@ -1,12 +1,23 @@
+import funcionalidades.AparelhoTelefonico;
+import funcionalidades.NavegadorInternet;
+import funcionalidades.ReprodutorMusical;
+
 public class Iphone {
     public static void main(String[] args) {
-        String nome = "Exato";
-        int numero = 301;
-        int tamahoNumero = nome.length();
+        AparelhoTelefonico aparelhoTelefonico = new AparelhoTelefonico();
+        ReprodutorMusical reprodutorMusical = new ReprodutorMusical();
+        NavegadorInternet navegadorInternet = new NavegadorInternet();
 
-        int resto = (numero - 1) % tamahoNumero;
-        char letra = nome.charAt(resto);
-        System.out.println(letra);
+        aparelhoTelefonico.ligar();
+        aparelhoTelefonico.atender();
+        aparelhoTelefonico.iniciarCorreioVoz("Voz");
+        aparelhoTelefonico.desligar();
+
+        reprodutorMusical.iniciar();
+
+        navegadorInternet.exibirPagina("http://pagina.com");
+        navegadorInternet.adicionarNovaAba("Nova aba");
+        navegadorInternet.atualizarPagina();
     }
 
 }

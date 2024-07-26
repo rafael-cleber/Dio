@@ -1,21 +1,37 @@
 ```mermaid
     classDiagram
+    
     class ReprodutorMusical {
-    +exemploMetodo1()
-    +exemploMetodo2(String exemplo)
+    -tocar()
+    -pausar()
+    -selecionarMusica(String musica)
+    +iniciar()
     }
 
     class AparelhoTelefonico {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +ligar()
+        +atender()
+        +desligar()
+        +inciarCorreioVoz(String voz)
     }
 
     class NavegadorInternet {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +exibirPagina(String url)
+        +adicionarNovaAba(String aba)
+        +atualizarPagina()
     }
 
     class iPhone {
+        aparelhoTelefonico.ligar();
+        aparelhoTelefonico.atender();
+        aparelhoTelefonico.iniciarCorreioVoz("Voz");
+        aparelhoTelefonico.desligar();
+
+        reprodutorMusical.iniciar();
+
+        navegadorInternet.exibirPagina("http://pagina.com");
+        navegadorInternet.adicionarNovaAba("Nova aba");
+        navegadorInternet.atualizarPagina();
     }
 
     iPhone --> ReprodutorMusical
